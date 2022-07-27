@@ -1,0 +1,15 @@
+﻿@page "/"
+
+<CountDown/>
+
+<div>
+    <p> <a href="@PhantomURl">Here</a>  click here for link to my first Paper! <a href ="@PhantomDownloadURl">Or download me</a></p>
+</div>
+
+<img src="/images/TUDelft_logo_black.png" width="300"/>
+<iframe width="420" height="315"  src="https://www.youtube.com/embed/m80E1K75vDI"></iframe>
+
+@code{
+    public const string PhantomURl = "https://www.researchgate.net/publication/354053799_Assessment_of_turbulent_blood_flow_and_wall_shear_stress_in_aortic_coarctation_using_image-based_simulations/fulltext/61213749232f955865a0e661/Assessment-of-turbulent-blood-flow-and-wall-shear-stress-in-aortic-coarctation-using-image-based-simulations.pdf";
+    public const string PhantomDownloadURl = "https://www.researchgate.net/publication/354053799_Assessment_of_turbulent_blood_flow_and_wall_shear_stress_in_aortic_coarctation_using_image-based_simulations/fulltext/61213749232f955865a0e661/Assessment-of-turbulent-blood-flow-and-wall-shear-stress-in-aortic-coarctation-using-image-based-simulations.pdf";
+}

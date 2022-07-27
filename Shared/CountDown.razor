@@ -1,0 +1,51 @@
+﻿@using System.Timers;
+
+<div>
+    <h1>
+        Coming soon!
+    </h1>
+</div>
+
+<div class="countdown-timer">
+    <div>
+        <p>@days</p>
+        <span>Days</span>
+    </div>
+    <div>
+        <p>@hours</p>
+        <span>Hours</span>
+    </div>
+    <div>
+        <p>@minutes</p>
+        <span>Minutes</span>
+    </div>
+    <div>
+        <p>@seconds</p>
+        <span>Seconds</span>
+    </div>
+</div>
+<image src="/images/GraduationHat.png" class="phdHat"></image>
+@code {
+    private Timer timer = new(1000);
+    private int days, hours, minutes, seconds;
+    private DateTime comingSoonDate;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // FIll in expected data here
+        comingSoonDate = new DateTime(2022, 11, 05);
+
+        timer.Elapsed += (sender, EventArgs) => countdown();
+        timer.Start();
+        await base.OnInitializedAsync();
+    }
+    private void countdown()
+    {
+        var diff = comingSoonDate - DateTime.Now;
+        days = diff.Days;
+        hours = diff.Hours;
+        minutes = diff.Minutes;
+        seconds = diff.Seconds;
+        StateHasChanged();
+    }
+}
