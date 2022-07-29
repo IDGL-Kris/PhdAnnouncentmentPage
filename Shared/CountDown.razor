@@ -1,12 +1,6 @@
 ﻿@using System.Timers;
 
-<div>
-    <h1>
-        Coming soon!
-    </h1>
-</div>
-
-<div class="countdown-timer">
+<div class="countdown-timer-grid">
     <div>
         <p>@days</p>
         <span>Days</span>
@@ -24,7 +18,8 @@
         <span>Seconds</span>
     </div>
 </div>
-<image src="/images/GraduationHat.png" class="phdHat"></image>
+
+
 @code {
     private Timer timer = new(1000);
     private int days, hours, minutes, seconds;
@@ -32,7 +27,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // FIll in expected data here
+        // Fill in expected data here
         comingSoonDate = new DateTime(2022, 11, 05);
 
         timer.Elapsed += (sender, EventArgs) => countdown();

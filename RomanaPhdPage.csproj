@@ -8,13 +8,20 @@
 
   <ItemGroup>
     <None Remove="Shared\CountDown.razor.css" />
+    <None Remove="Shared\ThrowingHat.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Shared\CountDown.razor.css" />
+    <Content Include="Shared\ThrowingHat.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\azure-static-web-apps-mango-ocean-065b3d603.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MatBlazor" Version="2.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
   </ItemGroup>
